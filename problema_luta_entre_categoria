@@ -1,0 +1,206 @@
+// Problema_03: Luta entre categorias
+
+//*Para comentar texto de uma vez: Ctrl+/
+
+// Problema
+// Você, desenvolvedor sênior do UFC, maior evento de artes maciais mistas (MMA) do mundo, deve desenvolver um programa que indique à organização do novo evento que sua empresa vai fazer se dois lutadores podem ou não lutar.
+
+// Os lutadores serão divididos em cinco categorias:
+
+// Peso leve: lutadores com peso mais leve que 55 kg;
+
+// Peso meio-médio:  categoria mais pesada que a anterior e com pesos mais leves que 65 kg;
+
+// peso médio: categoria mais pesada que a anterior e com pesos mais leves que 75 kg;
+
+// Peso meio-pesado: categoria mais pesada que a anterior e com pesos mais leves que 85 kg;
+
+// Peso pesado: pesos maiores ou iguais a 85 kg.
+
+// A regra do evento é: os lutadores só podem lutar com lutadores da mesma categoria.
+
+// Entrada
+// A entrada do seu programa será composta por duas variáveis:
+
+// peso1: variável numérica que armazena o peso de um dos lutadores;
+
+// peso2: variável numérica que armazena o peso do outro lutador.
+
+// Saída
+// Você deve retornar:
+
+// PODEM LUTAR: se os lutadores forem da mesma categoria;
+
+// NAO PODEM LUTAR: se os lutadores forem de categorias diferentes.
+
+// Exemplo
+// Entrada 1
+// peso1 = 60
+
+// peso2 = 64
+
+// Saída 1
+// PODEM LUTAR
+
+// Explicação 1
+// Um dos lutadores pesa 60 kg e o outro pesa 64 kg. Como ambos são da categoria dos pesos meio-médios, eles podem lutar.
+
+// Entrada 2
+// peso1 = 55
+
+// peso2 = 54
+
+// Saída 1
+// NAO PODEM LUTAR
+
+// Explicação 1
+// Um dos lutadores pesa 55 kg e o outro pesa 5 kg. O primeiro lutador citado é da categoria dos pesos meio-médios, o outro é da categoria dos pesos leves. Como ambos são de categorias diferentes, eles não podem lutar
+
+// Veja os três principais erros que você pode está cometendo ao passar seu código para a nossa plataforma:
+// Você está esquecendo de trocar o console.log pelo return;
+// Você não está retornando o que é pedido. Lembre-se que a mensagem a ser retornada tem que ser exatamente a solicitada no exercício, sem espaços em branco a mais e com as letras maiúsculas. Se a questão estiver pedindo, por exemplo, para retornar um número, não retorne nenhuma mensagem antes, retorne APENAS o número;
+// Você está atribuindo valores às variáveis de entrada.
+// Para maiores informações, veja a PARTE PRÁTICA DO MINICURSO.
+
+// CASO VOCÊ TENHA DELETADO A FUNÇÃO "solucao", COLE O CÓDIGO ABAIXO:
+// function solucao(peso1, peso2) {
+
+//       // seu codigo aqui
+
+// }
+
+//////////////////////////////////////////////////////////////////////////////
+
+//Segunda Tentativa MM:
+
+
+//01 - Os lutadores podem lutar ou não?
+
+//02 - Pesos e Categorias:
+//Peso Leve < 55  //(menor que 55kg)
+//Peso meio-médio >= 55 && Peso meio-médio < 65 (Maior ou igual a 55 e menor que 65)
+//peso médio >= 65 && peso médio < 75 (Maior ou igual a 65 e menor que 75)
+//Peso meio-pesado >= 75 && Peso meio-pesado < 85 (Maior ou igual a 75 e menor que 85)
+//Peso pesado >= 85 (igual ou acima de 85)
+
+//lutadores só podem lutar com lutadores da mesma categoria:
+
+//então precisamos conferir se peso 1 é da mesma categoria do peso 2:
+
+//Variáveis de entrada:
+// peso1
+// peso2
+
+//Saídas:
+// PODEM LUTAR: se os lutadores forem da mesma categoria;
+
+// NAO PODEM LUTAR: se os lutadores forem de categorias diferentes.
+
+//---------------------------------------
+
+//Criar as variáveis de entrada de PESO:
+
+let peso1 = 67  //Exemplo teste de Mesma Categoria
+let peso2 = 66  //Exemplo teste de Mesma Categoria
+//let peso1 = 85  //Exemplo teste de Categoria Diferente
+//let peso2 = 84  //Exemplo teste de Categoria Diferente
+//let peso1 = 100  //Exemplo teste de Última Faixa Categoria
+//let peso2 = 85  //Exemplo teste de Última Faixa Categoria
+
+//categorias:
+
+//Peso Leve < 55  //(menor que 55kg)
+//Peso meio-médio >= 55 && Peso meio-médio < 65 (Maior ou igual a 55 e menor que 65)
+//peso médio >= 65 && peso médio < 75 (Maior ou igual a 65 e menor que 75)
+//Peso meio-pesado >= 75 && Peso meio-pesado < 85 (Maior ou igual a 75 e menor que 85)
+//Peso pesado >= 85 (igual ou acima de 85)
+
+// conferir qual a categoria do peso 1:
+// escrever código para identificar a categoria do peso peso1
+
+let categoriaPeso1 = peso1
+
+if (peso1 < 55) {
+  categoriaPeso1 = "Peso Leve"
+} else if (peso1 >= 55 && peso1 < 65) {
+  categoriaPeso1 = "Peso Meio-Médio"
+} else if (peso1 >= 65 && peso1 < 75) {
+  categoriaPeso1 = "Peso Médio"
+} else if (peso1 >= 75 && peso1 < 85) {
+  categoriaPeso1 = "Peso Meio-Pesado"
+} else if (peso1 >= 85) {
+  categoriaPeso1 = "Peso Pesado"
+}
+
+//console.log = categoriaPeso1  //Para conferir qual categoria
+
+
+
+//let categoriaPeso1 = //recebe o resultado acima
+
+// conferir qual a categoria do peso 2:
+// escrever código para identificar a categoria do peso peso2
+
+let categoriaPeso2 = peso2
+
+if (peso2 < 55) {
+  categoriaPeso2 = "Peso Leve"
+} else if (peso2 >= 55 && peso2 < 65) {
+  categoriaPeso2 = "Peso Meio-Médio"
+} else if (peso2 >= 65 && peso2 < 75) {
+  categoriaPeso2 = "Peso Médio"
+} else if (peso2 >= 75 && peso2 < 85) {
+  categoriaPeso2 = "Peso Meio-Pesado"
+} else if (peso2 >= 85) {
+  categoriaPeso2 = "Peso Pesado"
+}
+
+//let categoriaPeso2 = //recebe o resultado acima
+
+//Agora verificar se categoriaPeso1 é igual a categoriaPeso2:
+
+if (categoriaPeso1 === categoriaPeso2) {
+  console.log ("PODEM LUTAR")
+} else if (categoriaPeso1 !== categoriaPeso2) {
+  console.log ("NAO PODEM LUTAR")
+}
+
+
+
+//----------------------------------------------------------------------
+
+//ANEXAR NA PLATAFORMA: IUHUUUU feito DE PRIMEIRA!!! 100% 16/06/2023
+
+let categoriaPeso1 = peso1
+if (peso1 < 55) {
+  categoriaPeso1 = "Peso Leve"
+} else if (peso1 >= 55 && peso1 < 65) {
+  categoriaPeso1 = "Peso Meio-Médio"
+} else if (peso1 >= 65 && peso1 < 75) {
+  categoriaPeso1 = "Peso Médio"
+} else if (peso1 >= 75 && peso1 < 85) {
+  categoriaPeso1 = "Peso Meio-Pesado"
+} else if (peso1 >= 85) {
+  categoriaPeso1 = "Peso Pesado"
+}
+
+let categoriaPeso2 = peso2
+if (peso2 < 55) {
+  categoriaPeso2 = "Peso Leve"
+} else if (peso2 >= 55 && peso2 < 65) {
+  categoriaPeso2 = "Peso Meio-Médio"
+} else if (peso2 >= 65 && peso2 < 75) {
+  categoriaPeso2 = "Peso Médio"
+} else if (peso2 >= 75 && peso2 < 85) {
+  categoriaPeso2 = "Peso Meio-Pesado"
+} else if (peso2 >= 85) {
+  categoriaPeso2 = "Peso Pesado"
+}
+
+if (categoriaPeso1 === categoriaPeso2) {
+  return "PODEM LUTAR"
+} else if (categoriaPeso1 !== categoriaPeso2) {
+  return "NAO PODEM LUTAR"
+}
+
+
