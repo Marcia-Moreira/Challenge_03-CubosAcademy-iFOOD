@@ -2,7 +2,7 @@
 
 Projeto Challenge_03-CubosAcademy-iFOOD - 07-2023
 
-Problema - Luta por diferença de peso
+Problema - Luta entre categoria
 
 Ferramentas:
 
@@ -11,7 +11,7 @@ Linguagem - JavaScript iniciante
 Desenvoltura - Lógica de Programação 
 GitHub - para divulgação do seu código
 
-Objetivo: Resolução do código para verificarmos se dois lutadores poderão lutar, de acordo com as variáveis informadas, obedecendo regras de diferença entre seus pesos.
+Objetivo: Resolução do código para verificarmos as actegorias de peso de lutadores.
 
 -Desenvolvido por - Marcia Moreira 
 -Desafio oferecido por - Programa iFOOD e Cubos Academy
